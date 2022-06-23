@@ -26,7 +26,7 @@ if (showOnlyHours >= 6 && showOnlyHours <= 12) {
     setImage = document.querySelector('img').src = 'https://criticalhits.com.br/wp-content/uploads/2021/06/0896cd12e66c175047dea1f0aba7d182-910x512.jpg' //nami imagem
 
 
-} else if (showOnlyHours > 18 && showOnlyHours <= 24) {
+} else if (showOnlyHours => 18 && showOnlyHours <= 24) {
     //condição para estar de noite
     setBGColor = document.querySelector('body').style.backgroundColor = '#2d2929'; //um pretin
     showParagraph = document.querySelector('#result').innerHTML = 'Ta de noite mlk da pa dale'
