@@ -14,22 +14,22 @@ let insertSpan = document.querySelector('span').innerHTML = `${showOnlyHours}:${
 if (showOnlyHours >= 6 && showOnlyHours <= 12) {
 
     setBGColor = document.querySelector('body').style.backgroundColor = '#0fd2e2'; //blue
-    showParagraph = document.querySelector('#result').innerHTML = 'Bom dia lindo acordou cedo em rs'
+    showParagraph = document.querySelector('#result').innerHTML = 'Bom dia!'
     setImage = document.querySelector('img').src = 'https://www.colunatech.com.br/wp-content/uploads/2021/08/one-peace-1.jpg' //luffy imagem
 
     //condição para estar de manhã
 
-} else if (showOnlyHours > 12 && showOnlyHours <= 18) {
+} else if (showOnlyHours > 12 && showOnlyHours < 18) {
     //condição para estar de tarde
     setBGColor = document.querySelector('body').style.backgroundColor = '#e6a60f';//laranja
-    showParagraph = document.querySelector('#result').innerHTML = 'Tardezinha boua'
+    showParagraph = document.querySelector('#result').innerHTML = 'Tardezinha boa!'
     setImage = document.querySelector('img').src = 'https://criticalhits.com.br/wp-content/uploads/2021/06/0896cd12e66c175047dea1f0aba7d182-910x512.jpg' //nami imagem
 
 
 } else if (showOnlyHours => 18 && showOnlyHours <= 24) {
     //condição para estar de noite
     setBGColor = document.querySelector('body').style.backgroundColor = '#2d2929'; //um pretin
-    showParagraph = document.querySelector('#result').innerHTML = 'Ta de noite mlk da pa dale'
+    showParagraph = document.querySelector('#result').innerHTML = 'A noite chegou!'
     setImage = document.querySelector('img').src = 'https://criticalhits.com.br/?attachment_id=208749' //brook imagem 1
 
     console.log(setColor)
