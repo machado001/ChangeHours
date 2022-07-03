@@ -1,5 +1,5 @@
 const showDate = new Date()
-const showOnlyHours = 8
+const showOnlyHours = showDate.getHours()
 const showOnlyMinutes = showDate.getMinutes()
 
 let insertSpan = function () {
