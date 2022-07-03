@@ -9,34 +9,34 @@ console.log(showDate)
 const showOnlyHours = showDate.getHours()
 console.log(showOnlyHours)
 const showOnlyMinutes = showDate.getMinutes()
-let insertSpan = document.querySelector('span').innerHTML = `${showOnlyHours}:${showOnlyMinutes}`
+let insertSpan = function () {
+    return setInterval(() => document.querySelector('span').innerHTML = `${showOnlyHours}:${showOnlyMinutes}`, 1000)
+}
+document.addEventListener('DOMContentLoaded',insertSpan)
 
-if (showOnlyHours >= 6 && showOnlyHours <= 12) {
+const c = () => {
+    if (showOnlyHours >= 6 && showOnlyHours <= 12) {
+        //condição para estar de manhã
+        showHTML('#0fd2e2', 'Bom dia!', 'https://www.colunatech.com.br/wp-content/uploads/2021/08/one-peace-1.jpg')
+    
+    } else if (showOnlyHours > 12 && showOnlyHours < 18) {
+        //condição para estar de tarde
+        showHTML('#e6a60f', 'Tardezinha boa!', 'https://criticalhits.com.br/wp-content/uploads/2021/06/0896cd12e66c175047dea1f0aba7d182-910x512.jpg')
+    
+    } else if (showOnlyHours => 18 && showOnlyHours <= 24) {
+        //condição para estar de noite
+        showHTML('#2d2929', 'A note chegou!', 'https://criticalhits.com.br/?attachment_id=208749')
+    
+    } else if (showOnlyHours >= 0 && showOnlyHours <= 6) {
+        //condição para estar de madrugada
+        a('#2d2626', 'Madruga, vai ficar até tarde mais uma vez?', 'https://static.wixstatic.com/media/1f8f2a_e63789c40dbd4d05999ccdeaa222ccda~mv2.png/v1/fit/w_720%2Ch_480%2Cal_c/file.png')
+    }
+}
 
-    setBGColor = document.querySelector('body').style.backgroundColor = '#0fd2e2'; //blue
-    showParagraph = document.querySelector('#result').innerHTML = 'Bom dia!'
-    setImage = document.querySelector('img').src = 'https://www.colunatech.com.br/wp-content/uploads/2021/08/one-peace-1.jpg' //luffy imagem
+document.addEventListener('DOMContentLoaded',c)
 
-    //condição para estar de manhã
-
-} else if (showOnlyHours > 12 && showOnlyHours < 18) {
-    //condição para estar de tarde
-    setBGColor = document.querySelector('body').style.backgroundColor = '#e6a60f';//laranja
-    showParagraph = document.querySelector('#result').innerHTML = 'Tardezinha boa!'
-    setImage = document.querySelector('img').src = 'https://criticalhits.com.br/wp-content/uploads/2021/06/0896cd12e66c175047dea1f0aba7d182-910x512.jpg' //nami imagem
-
-
-} else if (showOnlyHours => 18 && showOnlyHours <= 24) {
-    //condição para estar de noite
-    setBGColor = document.querySelector('body').style.backgroundColor = '#2d2929'; //um pretin
-    showParagraph = document.querySelector('#result').innerHTML = 'A noite chegou!'
-    setImage = document.querySelector('img').src = 'https://criticalhits.com.br/?attachment_id=208749' //brook imagem 1
-
-    console.log(setColor)
-} else if (showOnlyHours >= 0 && showOnlyHours <= 6) {
-    //condição para estar de madrugada
-    setBGColor = document.querySelector('body').style.backgroundColor = '#2d2626'; //um pretin um pouco mais pretin
-    showParagraph = document.querySelector('#result').innerHTML = 'Madruga, vai ficar até tarde mais uma vez?'
-    setImage = document.querySelector('img').src = 'https://static.wixstatic.com/media/1f8f2a_e63789c40dbd4d05999ccdeaa222ccda~mv2.png/v1/fit/w_720%2Ch_480%2Cal_c/file.png' //brook imagem 2
-
+function showHTML(color, text, img) {
+    setBGColor = document.querySelector('body').style.backgroundColor = color
+    showParagraph = document.querySelector('#result').innerHTML = text
+    setImage = document.querySelector('img').src = img
 }
