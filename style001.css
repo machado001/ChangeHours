@@ -57,3 +57,14 @@ img {
     border-radius: 500%;
     box-shadow: 0px 0px 5px #000000;
 }
+
+#result {
+    font-size: 2rem;
+    
+    animation: spin 1s linear 0s infinite ;
+    animation-direction: alternate;
+}
+
+@keyframes spin {
+    to{transform: scale(1.1);}
+}
