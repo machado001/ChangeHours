@@ -1,7 +1,7 @@
 const showDate = new Date()
 const hours = showDate.getHours()
 const minutes = showDate.getMinutes()
-console.log(minutes)
+
 
 let insertSpan = function () {
     const span = document.querySelector('span')
@@ -25,7 +25,8 @@ const c = () => {
         showHTML('#2d2929', 'A noite chegou!', 'https://criticalhits.com.br/?attachment_id=208749')
         console.log('lol???')
 
-    } else  {
+    } 
+    if (hours >=0 && hours <6)  {
         //condição para estar de madrugada
         showHTML('#2d2626', 'Madruga, vai ficar até tarde mais uma vez?', 'https://static.wixstatic.com/media/1f8f2a_e63789c40dbd4d05999ccdeaa222ccda~mv2.png/v1/fit/w_720%2Ch_480%2Cal_c/file.png')
         console.log('lol?')
