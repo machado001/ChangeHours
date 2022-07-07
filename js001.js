@@ -3,7 +3,11 @@ const showOnlyHours = showDate.getHours()
 const showOnlyMinutes = showDate.getMinutes()
 
 let insertSpan = function () {
-    return setInterval(() => document.querySelector('span').innerHTML = `${showOnlyHours}:${showOnlyMinutes}`, 1000)
+    const num = 5;
+    const span = document.querySelector('span')
+    const inner = setInterval(() =>
+        span.innerHTML = num < 10 ? `${showOnlyHours}:0${num}` : `${showOnlyHours}:${num}`, 1000)
+    return inner;
 }
 window.addEventListener('DOMContentLoaded', insertSpan)
 
@@ -31,7 +35,7 @@ function showHTML(color, text, img) {
     setBGColor = document.querySelector('body').style.backgroundColor = color
     showParagraph = setTimeout(() => {
         document.querySelector('#result').innerHTML = text
-    },2000) 
+    }, 2000)
     setImage = document.querySelector('img').src = img
     return;
 }
